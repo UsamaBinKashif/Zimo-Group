@@ -19,6 +19,12 @@ import YachtImg from "../assets/YACHTS.png";
 import WatchImg from "../assets/WATCHES.png";
 import YacthBG from "../assets/Yacht 1821.jpg";
 import MapImg from "../assets/Map.png";
+import ZimoPartnerlogo from "../assets/Logos/ZIMO Partners.png";
+import CivicaLogo from "../assets/Logos/CIVICA CES B.png";
+import Barclayslogo from "../assets/Logos/Barclays.png";
+import IslandBG from "../assets/Yacht 1822.jpg";
+import CarTwo from "../assets/Car 1821.jpg";
+import SliderArrow from "../assets/Logos/SliderArrow.png";
 const page = () => {
   return (
     <>
@@ -31,7 +37,7 @@ const page = () => {
         />
         <div className="absolute top-0 bottom-0 left-0 ">
           {/* HEADER */}
-          <header className=" p-4 flex items-center justify-center w-screen">
+          <header className=" p-6 flex items-center justify-center w-screen">
             {/* LEFT */}
             <div className="flex items-center text-center gap-4 flex-1">
               <div className="flex gap-6">
@@ -144,7 +150,15 @@ const page = () => {
 
       {/* SECTION CATEGORIES  */}
       <section className="h-screen px-5 py-10">
-        <h3 className="text-2xl tracking-widest uppercase ">OUR CATEGORIES</h3>
+        <div className="flex justify-between items-center">
+          <h3 className="text-2xl tracking-widest uppercase ">
+            OUR CATEGORIES
+          </h3>
+          <div className="flex gap-8 items-center">
+            <Image src={SliderArrow} alt="arrow" width={10} className="rotate-180	" />
+            <Image src={SliderArrow} alt="arrow" width={10} />
+          </div>
+        </div>
 
         {/* IMAGES SECTION */}
         <div className="flex pt-20 pb-2 space-x-4">
@@ -279,29 +293,56 @@ const page = () => {
       {/*YACHT SECTION END*/}
 
       {/* Map SECTION */}
-      <section className="h-screen relative overflow-hidden bg-gray-200">
+      <section className="h-screen relative overflow-hidden bg-gray-200 flex items-center justify-center ">
         <Image
           src={MapImg}
           alt="Hero-Background"
           className="w-full h-full object-cover"
         />
-        <div className="absolute top-0 bottom-0 left-0 ">
-          <section className="text-black flex justify-center flex-col w-screen relative">
-            <div className="text-black space-y-3 py-20  ">
-              <h1 className="text-3xl tracking-widest uppercase">
-              GLOBAL vision
-              </h1>
-              <p className=" tracking-widest text-xs w-1/2">
-                Delivering thousands of personalised alerts everyday, our USERS
-                can be first in line when that opportunity of a lifetime is
-                here.
-              </p>
-            </div>
-           
-          </section>
+        <div className="absolute top-0 bottom-0  flex flex-col justify-center items-center text-black ">
+          <h1 className="text-3xl tracking-widest  text-center mb-6">
+            GLOBAL vision
+          </h1>
+          <p className="tracking-widest text-xs w-[450px]">
+            Delivering thousands of personalised alerts everyday, our USERS can
+            be first in line when that opportunity of a lifetime is here.
+          </p>
         </div>
       </section>
       {/*Map SECTION END*/}
+      {/* PARTNERS SECTION */}
+      <section className="h-screen flex items-center px-56 gap-52">
+        <div>
+          <Image src={ZimoPartnerlogo} alt="zimo-logo" width={200} />
+        </div>
+        <div className="flex flex-col space-y-10">
+          <Image src={CivicaLogo} alt="logo" width={200} />
+          <Image src={Barclayslogo} alt="logo" width={200} />
+        </div>
+      </section>
+      {/* PARTNERS SECTION END */}
+
+      {/* ISLAND SECTION */}
+      <section className="h-screen relative overflow-hidden bg-gray-200 flex items-center justify-center pb-56">
+        <Image
+          src={IslandBG}
+          alt="Hero-Background"
+          className="w-full h-screen object-cover"
+        />
+        <div className="absolute top-[340px] flex  justify-between items-center text-black space-x-72">
+          <Image
+            src={CarTwo}
+            alt="Hero-Background"
+            className="w-60 h-full object-cover rounded-lg"
+          />
+          <Image
+            src={ZimoLogoThree}
+            alt="Hero-Background"
+            className="w-96 h-full object-cover opacity-30"
+          />
+        </div>
+      </section>
+      {/* ISLAND SECTION END */}
     </>
   );
 };
