@@ -13,7 +13,7 @@ import heroBg from "../public/ZIMO Pro.png";
 import ArrowIcon from "../assets/Logos/arrow.png";
 import ArrowDown from "../assets/Logos/ArrowDown.png";
 import ArrowDownBlack from "../assets/Logos/ArrowDownBlack.png";
-import EstateImg from "../assets/REAL ESTATE 1.jpg";
+import EstateImg from "../assets/REAL ESTATE.png";
 import CarImg from "../assets/CARS.png";
 import YachtImg from "../assets/YACHTS.png";
 import WatchImg from "../assets/WATCHES.png";
@@ -39,32 +39,48 @@ const page = () => {
           {/* HEADER */}
           <header className=" p-6 flex items-center justify-center w-screen">
             {/* LEFT */}
-            <div className="flex items-center text-center gap-4 flex-1">
+            <div className="flex items-center text-center gap-4 flex-1 ">
               <div className="flex gap-6">
-                <Image src={ZimoIcon} alt="zimo-icon" width={40} />
-                <Image src={ZimoLogo} alt="zimo-logo" width={120} />
+                <Image
+                  src={ZimoIcon}
+                  alt="zimo-icon"
+                  className="md:w-16 w-12 h-10"
+                />
+                <Image
+                  src={ZimoLogo}
+                  alt="zimo-logo"
+                  className="md:w-20 w-12 h-10"
+                />
+                <p className="hidden md:block text-xs text-white uppercase mt-6  ">
+                  About
+                </p>
               </div>
-              <p className="text-xs text-white uppercase ">About</p>
             </div>
 
             {/* CENTER */}
             <div className="flex-1 flex items-center justify-center">
-              <Image src={ZimoMain} alt="zimo-logo-main" width={100} />
+              <Image
+                src={ZimoMain}
+                alt="zimo-logo-main"
+                className="md:w-36 w-20 "
+              />
             </div>
             {/* RIGHT */}
-            <div className="flex-1 flex items-center gap-4">
-              <div className="flex flex-col text-[10px] text-white uppercase">
-                <p className="tracking-widest">17:23 London United Kingdom</p>
-                <p className="text-yellow-500 text-right">
+            <div className="flex-1 flex items-center gap-4 justify-center md:justify-start">
+              <div className="hidden md:flex flex-col  text-[10px] text-white uppercase">
+                <p className="md:tracking-widest">
+                  17:23 London United Kingdom
+                </p>
+                <p className="text-yellow-500 md:text-right ">
                   sunday, 12 February 202
                 </p>
               </div>
-              <Image src={Flag} alt="country-flag" width={30} />
+              <Image src={Flag} alt="country-flag" className="md:w-6 w-5" />
               <Image
                 src={CartIcon}
                 alt="cart-icon"
                 width={15}
-                className="mx-16"
+                className="md:mx-16"
               />
               <Image src={UserIcon} alt="user-icon" width={15} />
             </div>
@@ -103,37 +119,41 @@ const page = () => {
 
       {/* SECTION DETAILS */}
       <section className=" py-10">
-        <h3 className="text-sm tracking-widest text-center uppercase ">
+        <h3 className="text-xs md:text-sm tracking-widest text-center uppercase ">
           A Real estate and property platform that is changing the wolrd
         </h3>
         <section>
-          <div className=" px-5 py-10 relative">
+          <div className=" px-5 py-10 relative text-center md:text-left">
             <div className="  mb-10 ">
-              <h3 className=" tracking-widest text-[29px] font-normal uppercase mb-1 ">
+              <h3 className=" tracking-widest text-sm  md:text-[29px] font-normal uppercase mb-1 ">
                 A revloutionary platform
               </h3>
-              <h3 className="tracking-widest uppercase font-medium text-5xl">
+              <h3 className="tracking-widest uppercase font-medium  text-2xl md:text-5xl">
                 Entries - Sellers
               </h3>
-              <h3 className="tracking-wide uppercase font-medium text-7xl">
+              <h3 className="tracking-wide uppercase font-medium text-4xl md:text-7xl">
                 World Wide
               </h3>
             </div>
-            <div className="absolute right-0 pb-10 mb-10 p-4 w-[382px]">
+            <div className="absolute right-0 pb-10 mb-10 p-4 md:w-[382px]">
               <div className="flex flex-col items-center space-y-4 ">
-                <Image src={ZimoMainBlack} alt="zimo-logo-main" width={350} />
-                <p className="text-base uppercase tracking-widest  text-center">
+                <Image
+                  src={ZimoMainBlack}
+                  alt="zimo-logo-main"
+                  className="w-56 md:w-full"
+                />
+                <p className=" text-sm md:text-base uppercase tracking-widest text-center">
                   Connecting users from across the globe to facilitate life's
                   most important personal transactions.
                 </p>
               </div>
             </div>
-            <div className="mx-auto pt-60 mb-20">
+            <div className="md:mx-auto pt-60 mb-20">
               <div className="flex flex-col space-y-4">
-                <h2 className="tracking-widest text-[29px]">
+                <h2 className="tracking-widest text-xl md:text-[29px]">
                   THE BEST OF THE BEST
                 </h2>
-                <p className="text-base uppercase tracking-widest w-9/12 ">
+                <p className=" text-xs md:text-base uppercase tracking-widest md:w-9/12 ">
                   A COMBINATION OF AUTOMATION AND MANUAL CURATION OUR PRO AGENTS
                   AND MODERATION TEAM SELECTS THE HIGHEST QUALITY LISTINGS ON
                   THE MARKET FROM ACROSS THE WORLD.
@@ -150,18 +170,23 @@ const page = () => {
 
       {/* SECTION CATEGORIES  */}
       <section className="h-screen px-5 py-10">
-        <div className="flex justify-between items-center">
-          <h3 className="text-2xl tracking-widest uppercase ">
+        <div className="flex  justify-between items-center">
+          <h3 className="text-lg md:text-2xl tracking-widest uppercase ">
             OUR CATEGORIES
           </h3>
           <div className="flex gap-8 items-center">
-            <Image src={SliderArrow} alt="arrow" width={10} className="rotate-180	" />
+            <Image
+              src={SliderArrow}
+              alt="arrow"
+              width={10}
+              className="rotate-180	"
+            />
             <Image src={SliderArrow} alt="arrow" width={10} />
           </div>
         </div>
 
         {/* IMAGES SECTION */}
-        <div className="flex pt-20 pb-2 space-x-4">
+        <div className="flex flex-col md:flex-row pt-20 pb-2 space-y-4 md:space-y-0 md:space-x-4">
           <div className=" relative flex-1 h-[50vh]">
             <Image
               alt="property-img"
@@ -212,47 +237,44 @@ const page = () => {
           </div>
         </div>
         {/* IMAGES SECTION END */}
-        <h3 className="text-2xl tracking-widest uppercase text-center mb-10 ">
+        <h3 className="text-lg md:text-2xl tracking-widest uppercase text-center my-5 md:mb-10 ">
           One platform for all premium listings
         </h3>
-        <h3 className="text-xl tracking-widest uppercase text-center">
+        <h3 className="text-base md:text-xl tracking-widest uppercase text-center">
           UNLIMITED POTENTIAL
         </h3>
       </section>
       {/* SECTION CATEGORIES END */}
 
       {/* SECTION TICEKTS */}
-      <section>
-        <div className="py-24 ">
-          <div className="w-full mx-auto flex items-center justify-center space-x-24">
-            <div className="mb-6 ">
-              <Image
-                src={ZimoLogoTwoBlack}
-                alt="zimo-logo-main"
-                width={300}
-                className="mb-2"
-              />
+      <section className="mt-96 md:mt-0 py-24">
+        <div className="w-full mx-auto  md:pt-0 flex items-center  flex-col md:flex-row  justify-center md:space-x-24">
+          <div className="mb-6 ">
+            <Image
+              src={ZimoLogoTwoBlack}
+              alt="zimo-logo-main"
+              className="w-32 md:w-56 mb-2"
+            />
 
-              <h3 className=" tracking-widest text-lg font-normal uppercase mb-1 ">
-                Open source
-              </h3>
-              <h3 className="tracking-widest uppercase font-medium text-4xl  mb-4">
-                Entry tickets
-              </h3>
-              <h3 className="tracking-wide text-gray-400 uppercase font-medium text-xs">
-                World FOR ALL PREMIUM LISTINGS
-              </h3>
-            </div>
-            <div className="flex flex-col justify-center items-center ">
-              <Image
-                alt="property-img"
-                className="max-w-2xl h-auto object-cover object-center rounded mb-10 "
-                src={PropertyImg}
-              />
-              <h3 className=" tracking-widest text-base font-normal uppercase  ">
-                LET YOUR DREAMS FIND YOU
-              </h3>
-            </div>
+            <h3 className=" tracking-widest text-base md:text-lg font-normal uppercase mb-1 ">
+              Open source
+            </h3>
+            <h3 className="tracking-widest uppercase font-medium text-2xl md:text-4xl  mb-1 md:mb-4">
+              Entry tickets
+            </h3>
+            <h3 className="tracking-wide text-gray-400 uppercase font-medium text-sm md:text-xs">
+              World FOR ALL PREMIUM LISTINGS
+            </h3>
+          </div>
+          <div className="flex flex-col justify-center items-center ">
+            <Image
+              alt="property-img"
+              className="w-80 md:w-[642px] h-auto object-cover object-center rounded mb-10 "
+              src={PropertyImg}
+            />
+            <h3 className=" tracking-widest text-base font-normal uppercase  ">
+              LET YOUR DREAMS FIND YOU
+            </h3>
           </div>
         </div>
       </section>
@@ -267,19 +289,23 @@ const page = () => {
         />
         <div className="absolute top-0 bottom-0 left-0 ">
           <section className="text-white flex justify-center flex-col w-screen relative">
-            <div className="text-white space-y-3 py-20  absolute -right-56 top-0 ">
-              <h1 className="text-3xl tracking-widest uppercase">
+            <div className="text-white md:space-y-3 px-10 md:px-0 py-20  absolute md:-right-56 top-0 ">
+              <h1 className="text-lg md:text-3xl tracking-widest uppercase">
                 Personalised for You
               </h1>
-              <p className="text-gray-400 tracking-widest text-xs w-1/2">
+              <p className="text-gray-400 tracking-widest text-xs w-full  md:w-1/2">
                 Delivering thousands of personalised alerts everyday, our USERS
                 can be first in line when that opportunity of a lifetime is
                 here.
               </p>
             </div>
-            <div className="w-full flex items-center justify-between mt-72 p-10 ">
-              <Image src={ZimoLogoThree} alt="zimo-logo" width={300} />
-              <p className="text-gray-400 tracking-widest text-xs flex gap-2 items-center">
+            <div className="w-full flex items-center justify-between mt-56 md:mt-72 p-10 gap-10 md:gap-0 ">
+              <Image
+                src={ZimoLogoThree}
+                alt="zimo-logo"
+                className="w-40 md:w-96"
+              />
+              <p className="text-gray-400 tracking-widest text-[10px] md:text-xs flex gap-2 items-center">
                 CREATE USER ID
                 <span>
                   {" "}
@@ -303,7 +329,7 @@ const page = () => {
           <h1 className="text-3xl tracking-widest  text-center mb-6">
             GLOBAL vision
           </h1>
-          <p className="tracking-widest text-xs w-[450px]">
+          <p className="tracking-widest text-[10px]  md:text-xs w-[450px]">
             Delivering thousands of personalised alerts everyday, our USERS can
             be first in line when that opportunity of a lifetime is here.
           </p>
@@ -311,34 +337,34 @@ const page = () => {
       </section>
       {/*Map SECTION END*/}
       {/* PARTNERS SECTION */}
-      <section className="h-screen flex items-center px-56 gap-52">
+      <section className="h-screen flex flex-col md:flex-row mt-72 items-center md:px-56 gap-52">
         <div>
-          <Image src={ZimoPartnerlogo} alt="zimo-logo" width={200} />
+          <Image src={ZimoPartnerlogo} alt="zimo-logo" className="w-56 md:w-full" />
         </div>
-        <div className="flex flex-col space-y-10">
-          <Image src={CivicaLogo} alt="logo" width={200} />
-          <Image src={Barclayslogo} alt="logo" width={200} />
+        <div className="flex flex-col space-y-5 md:space-y-10">
+          <Image src={CivicaLogo} alt="logo" className="w-56 md:w-full"/>
+          <Image src={Barclayslogo} alt="logo" className="w-56 md:w-full" />
         </div>
       </section>
       {/* PARTNERS SECTION END */}
 
       {/* ISLAND SECTION */}
-      <section className="h-screen relative overflow-hidden bg-gray-200 flex items-center justify-center pb-56">
+      <section className="h-screen relative overflow-hidden bg-gray-200 flex  md:flex-row items-center justify-center pb-56">
         <Image
           src={IslandBG}
           alt="Hero-Background"
           className="w-full h-screen object-cover"
         />
-        <div className="absolute top-[340px] flex  justify-between items-center text-black space-x-72">
+        <div className="absolute top-[580px] md:top-[340px] gap-5 md:gap-0 flex  lg:top-[500px] md:justify-between items-center text-black md:space-x-72">
           <Image
             src={CarTwo}
             alt="Hero-Background"
-            className="w-60 h-full object-cover rounded-lg"
+            className="w-40 md:w-60 h-full object-cover rounded-lg"
           />
           <Image
             src={ZimoLogoThree}
             alt="Hero-Background"
-            className="w-96 h-full object-cover opacity-30"
+            className="w-40 md:w-96 h-full opacity-30"
           />
         </div>
       </section>
